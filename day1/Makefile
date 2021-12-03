@@ -1,0 +1,2 @@
+all:
+	nvcc day1_gpu_overkill.cu -I/opt/NVIDIA_CUDA-11.4_Samples/common/inc -I/usr/local/cuda-11.4/targets/x86_64-linux/include -m64    --threads 0 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_86,code=compute_86 -o out.exe
